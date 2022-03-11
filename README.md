@@ -26,7 +26,7 @@
 | product        | string     | null: false                     |
 | explanation    | text       | null: false                     |
 | category_id    | integer    | null: false                     |
-| state_id       | integer    | null: false                     |
+| sales_state_id | integer    | null: false                     |
 | postage_id     | integer    | null: false                     |
 | prefecture_id  | integer    | null: false                     |
 | post_period_id | integer    | null: false                     |
