@@ -14,7 +14,7 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: ' is invalid. Include both letters and numbers'
 
-  NAME_REGEX = /\A[ぁ-んァ-ン一-龥ａ-ｚＡ-Ｚ]+\z/u.freeze
+  NAME_REGEX = /\A[ぁ-んァ-ン一-龥々ーａ-ｚＡ-Ｚ]+\z/u.freeze
   validates_format_of :last_name, with: NAME_REGEX, message: ' is invalid. Input full-width characters'
   validates_format_of :first_name, with: NAME_REGEX, message: ' is invalid. Input full-width characters'
 
