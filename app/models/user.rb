@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :items       
+
   validates :nickname, presence: true
   validates :last_name, presence: true
   validates :first_name, presence: true
@@ -23,7 +25,7 @@ class User < ApplicationRecord
   validates_format_of :first_name_ruby, with: RUBY_REGEX, message: ' Input full-width katakana characters'
 
   
-  # has_many :items
+ 
   # has_many :comments
   # has_many :orders
 end
