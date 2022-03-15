@@ -50,8 +50,8 @@ class ItemsController < ApplicationController
   def select_item
     @item = Item.find(params[:id])
   end
+
   def user_chek
     redirect_to root_path unless current_user.id == @item.user_id
   end
-
 end
