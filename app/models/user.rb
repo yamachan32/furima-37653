@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
-  has_many :oders
+  has_many :orders
 
   validates :nickname, presence: true
   validates :last_name, presence: true
@@ -25,6 +25,5 @@ class User < ApplicationRecord
   validates_format_of :last_name_ruby, with: RUBY_REGEX, message: ' Input full-width katakana characters'
   validates_format_of :first_name_ruby, with: RUBY_REGEX, message: ' Input full-width katakana characters'
 
-  # has_many :comments
-  # has_many :orders
+
 end
