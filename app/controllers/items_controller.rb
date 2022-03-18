@@ -24,9 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if Order.exists?(item_id: params[:id])
-      redirect_to root_path
-    end
+    redirect_to root_path if Order.exists?(item_id: params[:id])
   end
 
   def update
@@ -41,7 +39,6 @@ class ItemsController < ApplicationController
     @item.destroy
     redirect_to root_path
   end
-
 
   private
 

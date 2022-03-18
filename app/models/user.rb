@@ -24,6 +24,4 @@ class User < ApplicationRecord
   RUBY_REGEX = /\A[ァ-ヶー－]+\z/u.freeze
   validates_format_of :last_name_ruby, with: RUBY_REGEX, message: ' Input full-width katakana characters'
   validates_format_of :first_name_ruby, with: RUBY_REGEX, message: ' Input full-width katakana characters'
-
-
 end
