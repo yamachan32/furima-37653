@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :select_item, only: [:show, :edit, :update, :destroy]
   before_action :user_check, only: [:edit, :destroy]
+
   def index
     @item = Item.order(id: 'DESC')
   end
@@ -23,6 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    redirect_to root_path if @item.order.present?
   end
 
   def update
