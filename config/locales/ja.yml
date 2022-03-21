@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        last_name: 苗字
+        first_name: 名前
+        last_name_ruby: 苗字カナ
+        first_name_ruby: 名前カナ
+        birthday: 生年月日
+        is_invalid: は無効です
+
+      item:
+        image: 商品画像
+        product: 商品名
+        explanation: 商品の説明
+        category_id: カテゴリー
+        sales_state_id: 商品の状態
+        postage_id: 配送料の負担
+        prefecture_id: 発送元の地域
+        post_period_id: 発送までの日数
+        price: 販売価格
+
+  activemodel:
+    attributes:
+      order_address:
+        token: カード情報
+        post_code: 郵便番号
+        city: 市区町村
+        block: 番地
+        phone_number: 電話番号
+        prefecture_id: 都道府県
