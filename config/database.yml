@@ -50,10 +50,8 @@ test:
 production:
   <<: *default
   database: furima_37653_production
-# herokuデプロイ時
-  # username: furima_37653
-  # password: <%= ENV['FURIMA_37653_DATABASE_PASSWORD'] %>
-# EC2デプロイ時
+  username: furima_37653
+  password: <%= ENV['FURIMA_37653_DATABASE_PASSWORD'] %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
